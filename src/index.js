@@ -7,16 +7,19 @@ import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 import userReducer from './features/user'
 import toggleReducer from './features/toggle'
+import themeReducer from './features/theme'
 
+// register reducers
 const store = configureStore({
    reducer: {
      user:userReducer,
-     toggle:toggleReducer
+     toggle:toggleReducer,
+     theme:themeReducer
    },
 });
 
-console.log(store.getState())
 
+ 
 
 ReactDOM.render(
    <React.StrictMode>

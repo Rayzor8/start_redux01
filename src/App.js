@@ -1,9 +1,12 @@
 import LoginPage from "./components/LoginPage";
 import ProfilePage from "./components/ProfilePage";
+import {useSelector} from "react-redux";
 
 function App() {
+   const themeColor = useSelector(state => state.theme.value)
+  console.log(themeColor)
    return (
-      <div className="App font-mont w-full min-h-screen bg-gradient-to-r from-indigo-200 via-blue-10 to-blue-200 py-4 px-4">
+      <div className="App font-mont w-full min-h-screen py-4 px-4" style={{backgroundColor:themeColor}}>
         <ProfilePage/>
         <LoginPage/>
       </div>
